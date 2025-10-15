@@ -1,0 +1,1 @@
+Web site for a comic book shop, demonstrating html, css, and js.
