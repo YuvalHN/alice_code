@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="app.css" />
+        <title>Comics Shop</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
-    <title>Comics Shop</title>
-</head>
+    <body>
+        <header id="topBar">
+            <h1 id="l_md_title">Comics Shop</h1>
+            <h1 id="small_title">Comics!</h1>
 
-<body>
-    <header id="topBar">
-        <h1 id="l_md_title">Comics Shop</h1>
-        <h1 id="small_title">Comics!</h1>
-
-        <button class="cart-button" onclick="showCart()">
-            🛒 Cart <span class="cart-count" id="cartCount">0</span>
-        </button>
-    </header>
-
-
-    <main>
-        <div id="chooseGenre" class="containerGenre">
-            <h2>Choose A Genre:</h2>
-
-            <button id="dropdownBtn" onclick="dropdownGenreBtn()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                </svg>
+            <button class="cart-button" onclick="showCart()">
+                🛒 Cart <span class="cart-count" id="cartCount">0</span>
             </button>
+        </header>
 
-            <div id="genreBtnContainer">
-                <button class="genreBtn" id="allGenresBtn" onclick="printComicCards('all books', 0)">All Genres</button>
-                <button class="genreBtn" id="romanceBtn" onclick="printComicCards('romance', 0)">Romance</button>
-                <button class="genreBtn" id="fantasyBtn" onclick="printComicCards('fantasy', 0)">Fantasy</button>
-                <button class="genreBtn" id="musicBtn" onclick="printComicCards('music', 0)">Music</button>
+        <main>
+            <div id="chooseGenre" class="containerGenre">
+                <h2>Choose A Genre:</h2>
+
+                <button id="dropdownBtn" onclick="dropdownGenreBtn()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="40"
+                        fill="currentColor"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                        />
+                    </svg>
+                </button>
+
+                <div id="genreBtnContainer">
+                    <button
+                        class="genreBtn"
+                        id="allGenresBtn"
+                        onclick="printComicCards('all books', 0)"
+                    >
+                        All Genres
+                    </button>
+                    <button
+                        class="genreBtn"
+                        id="romanceBtn"
+                        onclick="printComicCards('romance', 0)"
+                    >
+                        Romance
+                    </button>
+                    <button
+                        class="genreBtn"
+                        id="fantasyBtn"
+                        onclick="printComicCards('fantasy', 0)"
+                    >
+                        Fantasy
+                    </button>
+                    <button
+                        class="genreBtn"
+                        id="musicBtn"
+                        onclick="printComicCards('music', 0)"
+                    >
+                        Music
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div id="giftImg">
-            <button id="removeGiftImage" onclick="removeGiftImg()"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
-                </svg></button>
-            <img src="gift-removebg-preview.png">
-        </div>
+            <div id="giftImg">
+                <button id="removeGiftImage" onclick="removeGiftImg()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-x-square-fill"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"
+                        />
+                    </svg>
+                </button>
+                <img src="gift-removebg-preview.png" />
+            </div>
 
-        <div class="container" id="catalogPage">
+            <div class="container" id="catalogPage"></div>
 
-        </div>
+            <div id="pageBtnsContainer"></div>
 
-        <div id="pageBtnsContainer">
+            <div id="cartPage" class="cart-page">
+                <button type="button" class="back-btn" onclick="showCatalog()">
+                    back to catalog
+                </button>
+                <h2>Your Shopping Cart</h2>
+                <div id="cartItems"></div>
+                <div class="cart-total" id="cartSubtotal">Sub-Total: $0.00</div>
+                <div class="cart-total" id="cartDiscount1">Discount: $0.00</div>
+                <div class="cart-total" id="cartDiscount2">Discount: $0.00</div>
+                <div class="cart-total" id="cartDiscount3">Discount: $0.00</div>
+                <div class="cart-total" id="cartFinalPrice">
+                    Final Price: $0.00
+                </div>
+                <div id="cartrecommendations">recommendations</div>
+            </div>
+        </main>
 
-        </div>
-
-        <div id="cartPage" class="cart-page">
-            <button type="button" class="back-btn" onclick="showCatalog()">back to catalog</button>
-            <h2>Your Shopping Cart</h2>
-            <div id="cartItems"></div>
-            <div class="cart-total" id="cartSubtotal">Sub-Total: $0.00</div>
-            <div class="cart-total" id="cartDiscount1">Discount: $0.00</div>
-            <div class="cart-total" id="cartDiscount2">Discount: $0.00</div>
-            <div class="cart-total" id="cartDiscount3">Discount: $0.00</div>
-            <div class="cart-total" id="cartFinalPrice">Final Price: $0.00</div>
-            <div id="cartrecommendations">recommendations</div>
-        </div>
-
-    </main>
-
-
-    <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
