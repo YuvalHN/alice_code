@@ -1,0 +1,60 @@
+label {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus {
+    box-shadow: 0 6px 18px rgba(108, 99, 255, 0.12);
+    border-color: rgba(108, 99, 255, 0.25);
+}
+
+
+button.login {
+    margin: 10px;
+    background: white;
+    color: #333;
+    border: none;
+    padding: 14px 28px;
+    margin-top: 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+
+button.login:hover {
+background: #333;
+color: white;
+transform: translateY(-3px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+button.login:active {
+transform: scale(0.97);
+}
+
+
+@media (max-width: 480px) {
+h1 {
+font-size: 2.2rem;
+}
+.card {
+padding: 20px;
+}
+}
